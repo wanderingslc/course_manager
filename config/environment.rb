@@ -10,6 +10,6 @@ ActionMailer::Base.smtp_settings = {
     :authentication => :plain,
     :user_name => ENV['SENGRID_USERNAME'],
     :password => ENV['SENDGRID_PASSWORD'],
-    :domain => 'heroku.com',
+    :domain => 'radiant-dusk-23485.herokuapp.com/',
     :enable_starttls_auto => true
 }
