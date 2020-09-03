@@ -1,4 +1,6 @@
 class Course < ApplicationRecord
+  include PublicActivity::Model
+  tracked
   validates :title, :short_description, :language, :price, :level, presence: true
   validates :description, presence: true, length: {:minimum => 5}
   has_rich_text :description
