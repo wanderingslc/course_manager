@@ -24,6 +24,13 @@
             .fa.fa-user
               Users
 
+      = search_form_for @ransack_courses, as: :courses_search, url: :courses do |f|
+        .input-group
+          = f.search_field :title_cont, class: 'form-control-sm', style: 'float: left; width: 150px;', class: 'form-control'
+          %span.input-group-append
+            %button.btn.btn-primary.btn-sm{:type => "submit"}
+              %span.fa.fa-search{"aria-hidden" => "true"}
+
 
       %form.form-inline.my-2.my-lg-0
         = form_tag(courses_path, method: :get) do
